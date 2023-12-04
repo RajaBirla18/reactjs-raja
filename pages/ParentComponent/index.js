@@ -1,10 +1,11 @@
 import React from "react";
 import Table from "../childComponent/table";
+import styles from "./parent.module.css";
 
 export default function Parent() {
     return (
         <>
-            <div style={{ display: "flex", justifyContent: "space-evenly", alignItems: "center" }}>
+            <div className={styles.style-div}>
                 <Table num={3} />
                 <Table num={5} />
                 
@@ -17,3 +18,8 @@ export default function Parent() {
         </>
     )
 }
+
+
+
+
+// style={{ display: "flex", justifyContent: "space-evenly", alignItems: "center" }}

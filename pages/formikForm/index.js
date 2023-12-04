@@ -6,7 +6,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import * as formik from 'formik';
 import * as yup from 'yup';
-
+import  styles from "./formik.module.css";
 
 const initialvalue = {
     name: "",
@@ -30,7 +30,7 @@ function LoginForm() {
     // const Formik = initialvalue;
     // const Formik = useFormik(initialvalue);
 
-    const handleSubmitForm = (values,actions) => {
+    const handleSubmitForm = (values, actions) => {
 
         setUsers([...users, values]);
         actions.resetForm();
@@ -48,35 +48,36 @@ function LoginForm() {
             {({ handleSubmit, handleChange, values, touched, errors }) => (
                 <Form onSubmit={handleSubmit}>
 
+
                     <Row className="mb-3">
 
-
                         <Form.Group as={Col} md="4" controlId="validationFormik01">
-                            <Form.Label style={{margin:"10px"}}>Name</Form.Label>
+                            <Form.Label style={{ margin: "10px" }}>Name</Form.Label>
                             <Form.Control
                                 type="text"
                                 name="name"
                                 placeholder="Enter your name"
                                 value={values.name}
                                 onChange={handleChange}
-                                style={{margin:"10px"}}
+                                style={{ margin: "10px" }}
                                 // isValid={touched.name && !errors.name}
                                 isInvalid={touched.name && !!errors.name}
                             />
+
 
                             <Form.Control.Feedback type='invalid' >{errors.name}</Form.Control.Feedback>
 
 
                         </Form.Group>
                         <Form.Group as={Col} md="4" controlId="validationFormik02">
-                            <Form.Label style={{margin:"10px"}} >Email</Form.Label>
+                            <Form.Label style={{ margin: "10px" }} >Email</Form.Label>
                             <Form.Control
                                 type="text"
                                 name="email"
                                 placeholder="Enter your email"
                                 value={values.email}
                                 onChange={handleChange}
-                                style={{margin:"10px"}}
+                                style={{ margin: "10px" }}
                                 // isValid={touched.email && !errors.email}
                                 isInvalid={touched.email && !!errors.email}
                             />
@@ -107,7 +108,7 @@ function LoginForm() {
                         </Form.Group>
                     </Row>
 
-                    <Button type="submit" style={{margin:"10px"}}>Submit form</Button>
+                    <Button type="submit" className={styles.button }>Submit form</Button>
                 </Form>
             )}
 
