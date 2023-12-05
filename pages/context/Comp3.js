@@ -1,6 +1,6 @@
 import React from "react";
 
-const Comp3 = () =>{
+function Comp3(){
     return(
         <>
         <h1>My name is raja birla</h1>

@@ -1,7 +1,7 @@
 import React from "react";
 import Comp1 from "./Comp1";
 
-const Index = () => {
+function Index(){
     return (
         <>
             <Comp1 />
