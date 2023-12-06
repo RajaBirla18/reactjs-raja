@@ -6,7 +6,6 @@ const Comp2 = () => {
     return (
         <>
             <Comp3 />
-
         </>
     )
 }

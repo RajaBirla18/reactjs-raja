@@ -1,6 +1,5 @@
 import React from "react";
 import { FirstName, LastName, MidName } from "./index";
-
 const Comp4 = () => {
     return (
         <>
