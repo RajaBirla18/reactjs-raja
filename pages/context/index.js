@@ -1,11 +1,30 @@
-import React from "react";
+import React, { createContext } from "react";
 import Comp1 from "./Comp1";
 
-function Index(){
+const FirstName = createContext();
+const MidName = createContext();
+const LastName = createContext();
+
+
+const Index = () => {
     return (
         <>
-            <Comp1 />
+
+            <FirstName.Provider value={"Raja"}>
+
+                <MidName.Provider value={"Kumar"}>
+
+                    <LastName.Provider value={"Birla"}>
+
+                        <Comp1 />
+
+                    </LastName.Provider>
+
+                </MidName.Provider>
+
+            </FirstName.Provider>
         </>
     )
 }
-export default Index; 
+export default Index;
+export { FirstName, LastName, MidName };

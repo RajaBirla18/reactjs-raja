@@ -1,7 +1,7 @@
 import React from "react";
 import Comp2 from "./Comp2";
 
-function Comp1()
+const Comp1 = () =>
 {
     return (
         <>
